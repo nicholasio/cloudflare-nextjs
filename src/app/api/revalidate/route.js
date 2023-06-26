@@ -8,3 +8,5 @@ export async function GET(request) {
 
   return NextResponse.json({ revalidated: true, now: Date.now() });
 }
+
+export const runtime = "edge";
