@@ -1,7 +1,7 @@
 async function getPost(slug) {
   const post = await fetch(
-    `https://js1.10up.com/wp-json/wp/v2/posts?slug=${slug}`,
-    { next: { revalidate: 60 * 5 } }
+    `https://js1.10up.com/wp-json/wp/v2/posts?slug=${slug}`
+    /* { next: { revalidate: 60 * 5 } } */
   ).then((res) => res.json());
 
   return post[0];
