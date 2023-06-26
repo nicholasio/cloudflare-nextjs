@@ -13,7 +13,7 @@ export default async function Post({ params }) {
   return (
     <div>
       <h1>{post.title.rendered}</h1>
-      <h4>Rendered at: {new Date().toJSON()}</h4>
+      <h4>Post Modified at: {post.modified}</h4>
 
       <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
     </div>
